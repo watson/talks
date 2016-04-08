@@ -5,3 +5,5 @@
 - **Location:** San Francisco
 
 The code contained in the folder `example-app` was demoed on slide 16.
+
+[SpeakerDeck slies can be found here](https://speakerdeck.com/wa7son/sfnode-april-instrumenting-node-dot-js-in-production)
