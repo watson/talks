@@ -18,6 +18,8 @@ module.exports = function (agent) {
       var prev = agent.currentTransaction
       agent.currentTransaction = trans
       var result = fn.apply(this, arguments)
+      agent.currentTransaction = prev
+      return result
     }
   }
 
