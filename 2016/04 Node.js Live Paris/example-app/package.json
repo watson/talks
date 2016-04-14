@@ -1,0 +1,19 @@
+{
+  "name": "example-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "mongojs": "^2.3.0",
+    "patterns": "^1.0.2",
+    "pg": "^4.5.2",
+    "require-in-the-middle": "^2.1.0",
+    "shimmer": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT"
+}
