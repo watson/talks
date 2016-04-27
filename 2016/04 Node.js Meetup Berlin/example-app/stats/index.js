@@ -3,7 +3,17 @@
 var agent = module.exports = {}
 
 require('./modules')(agent) // Hook into Module._load
-require('./async-hook')(agent) // Hook into every async function in Node core
+
+if (process.env.ASYNC_WRAP) {
+  // With AsyncWrap support:
+  console.log('Using AsyncWrap')
+  require('./async-hook2')(agent) // Hook into nextTick, timers and Promise in Node core
+  require('./async-wrap')(agent) // Use AsyncWrap
+} else {
+  // Without AsyncWrap support:
+  console.log('Not using AsyncWrap')
+  require('./async-hook')(agent) // Hook into every async function in Node core
+}
 
 var util = require('util')
 var Transaction = require('./transaction')
