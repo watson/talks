@@ -5,4 +5,4 @@
 - **Location:** Berlin, Germany
 
 The code contained in the folder `example-app` is a showcase of how the
-Node.js Event Loop can be patched without using AsyncWrap.
+Node.js Event Loop can be patched with and without using AsyncWrap.
