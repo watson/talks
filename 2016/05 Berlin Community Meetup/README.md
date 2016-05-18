@@ -1,6 +1,6 @@
 # Berlin Community Meetup
 
-- **Title:** These goes to eleven
+- **Title:** These go to eleven
 - **Date:** 2016-05-18
 - **Location:** Berlin
 
