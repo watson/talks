@@ -1,0 +1,38 @@
+# server: allow stacktraces of any size to be created
+ulimit -c unlimited
+
+# server: run server with option to dump core
+nodejs --abort-on-uncaught-exception crash.js
+
+# client: send request to server that will make it crash
+curl -X POST -H 'Content-Type: application/json' -d @signup.json ubuntu.local:3000/signup
+
+# client: download the core dump
+scp ubuntu.local:./2-crash/core .
+
+# client: donwload the node binary that generated the core dump
+scp ubuntu.local:/usr/bin/nodejs .
+
+# client: start vm
+autopsy start
+
+# client: check that vm is running
+autopsy status
+
+# client: run autopsy with the downloaded files
+autopsy nodejs core
+
+# client: log into vm to run commands manually (optional)
+ssh -p 2222 root@localhost
+
+# solaris: run mdb manually
+mdb nodejs core
+
+# mdb: load v8 plugin
+::load v8
+
+# mdb: show js stack with details
+::jsstack -vn0
+
+# mdb: output the content of a memory address
+<addr>::jsprint
