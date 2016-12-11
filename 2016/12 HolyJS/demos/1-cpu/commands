@@ -1,0 +1,20 @@
+# server: start server
+node --perf_basic_prof_only_functions server.js &
+
+# server: sample stack traces from running process
+sudo perf record -F 99 -p `pgrep -n node` -g -- sleep 10
+
+# client: fire a lot of requests to the running server while sampling
+node bench.js
+
+# server: ensure perf have access to map files created by Node.js
+sudo chown root:root /tmp/*.map
+
+# server: output all the sampled stack traces to a file
+sudo perf script > stacks
+
+# client: donwload the stacks
+scp ubuntu.local:./1-cpu/stacks .
+
+# client: generate flamegraph
+0x -c gen stacks > flamegraph.html

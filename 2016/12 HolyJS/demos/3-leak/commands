@@ -1,0 +1,8 @@
+# server: run server
+node server.js
+
+# client: send requests
+node client.js
+
+# server: take heap dumps
+kill -USR2 <pid>
