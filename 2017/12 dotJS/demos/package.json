@@ -1,0 +1,11 @@
+{
+  "name": "dotJS 2017 demos",
+  "author": "Thomas Watson <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT",
+  "dependencies": {
+    "ansi-diff-stream": "^1.2.0",
+    "mode-s-decoder": "^0.1.0",
+    "printf": "^0.2.5",
+    "rtl-sdr": "^0.1.0"
+  }
+}
