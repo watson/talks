@@ -43,7 +43,7 @@
         pos.forEach(function(a) {
           var marker = markers[a[0]]
           if (marker) {
-            marker.position = new google.maps.LatLng(a[1], a[2])
+            marker.setPosition(new google.maps.LatLng(a[1], a[2]))
           } else {
             markers[a[0]] = new google.maps.Marker({
               position: new google.maps.LatLng(a[1], a[2]),
