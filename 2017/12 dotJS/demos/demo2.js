@@ -2,7 +2,6 @@
 
 const rtlsdr = require('rtl-sdr')
 const decoder = require('mode-s-decoder')
-const differ = require('ansi-diff-stream')
 
 const DEFAULT_RATE = 2000000
 const DEFAULT_FREQ = 1090000000
@@ -10,10 +9,6 @@ const ASYNC_BUF_NUMBER = 12
 const DATA_LEN = 16 * 16384    // 256k
 const AUTO_GAIN = -100         // Use automatic gain
 const MAX_GAIN = 999999        // Use max available gain
-
-// setup console output
-const diff = differ()
-diff.pipe(process.stdout)
 
 const self = decoder.init()
 const dev = setup()
