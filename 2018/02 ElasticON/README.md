@@ -16,4 +16,8 @@ instrumentation overhead, how to add valuable metadata to the collected
 metrics to ease debugging, and how to add custom watchers to instrument
 any part of your codebase.
 
+## Video
+
+[Watch on elastic.co](https://www.elastic.co/elasticon/conf/2018/sf/instrumenting-node-js-apps)
+
 _[Slides on Speaker Deck](https://speakerdeck.com/wa7son/elastic-on-2018-instrumenting-node-dot-js-apps-with-elastic-apm)_
