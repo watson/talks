@@ -19,6 +19,6 @@ sequel to Inception.
 
 ## Video
 
-[![It goes to eleven, Thomas Watson - AtTheFrontend 2016](https://img.youtube.com/vi/wBOX_i7Z514/0.jpg)](https://www.youtube.com/watch?v=wBOX_i7Z514)
+[![It goes to eleven, Thomas Watson - AtTheFrontend 2016](https://i.vimeocdn.com/video/573074590.webp?mw=480&mh=360&q=70)](https://vimeo.com/168476908)
 
 _[Slides on Speaker Deck](https://speakerdeck.com/wa7son/atthefrontend-2016-these-go-to-eleven)_
