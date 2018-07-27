@@ -12,4 +12,6 @@ can listen to and transcode the radio spectrum using Node.js. It allows
 you to interact with IoT devices, debug cellular meta-data, and
 intercept commercial and private airplane communication.
 
-_[Slides on Speaker Deck](https://speakerdeck.com/wa7son/nodeconf-barcelona-2017-build-your-own-javascript-powered-radio)_
+[Watch video](https://www.elastic.co/videos/build-your-own-javascript-powered-radio-by-thomas-watson)
+
+[Slides on Speaker Deck](https://speakerdeck.com/wa7son/nodeconf-barcelona-2017-build-your-own-javascript-powered-radio)
