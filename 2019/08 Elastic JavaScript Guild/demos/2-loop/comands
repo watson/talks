@@ -1,0 +1,17 @@
+# Start demo
+node demo.js
+
+# Take core dump
+lldb --attach-pid `pgrep -n node` -b -o 'process save-core "core"'
+
+# Start llnode with the executed program and the core file
+llnode soultions/node -c solutions/core
+
+# Show llnode optimize stack trace
+v8 bt
+
+# Select the stack frame of interest
+frame select 1
+
+# Show stack frame source code
+v8 source list

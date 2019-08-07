@@ -1,0 +1,35 @@
+# Tell OS to capture core dumps
+ulimit -c unlimited
+
+# Tell Node.js to make core dumps
+node --abort-on-uncaught-exception server.js
+
+# Send request to server
+curl -H 'Content-Type: application/json' --data-binary @signup.json http://localhost:3000/signup
+
+# Start llnode with the executed program and the core file
+llnode soultions/node -c solutions/core
+
+# Show help
+help
+
+# Show llnode help
+v8 help
+
+# Show normal lldb stack trace
+bt
+
+# Show llnode optimize stack trace
+v8 bt
+
+# Select the stack frame of interest
+frame select 6
+
+# Show stack frame source code
+v8 source list
+
+# Show 2nd argument to onSave
+v8 inspect 0x35501ad55ec1
+
+# Dive deeper into 2nd argument
+v8 inspect 0x35501ad55ef9
